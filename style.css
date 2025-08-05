@@ -200,3 +200,37 @@ hr {
     background-color: #e0e0e0;
     margin: 2rem 0;
 }
+
+/* --- 表格专属样式，确保移动端可滑动 --- */
+.table-container {
+    overflow-x: auto; /* 关键：允许内容水平滚动 */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* 设置一个最小宽度，确保在窄屏上触发滚动 */
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+thead {
+    background-color: #f4f7f6;
+}
+
+th {
+    font-weight: bold;
+    color: #005f73;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
