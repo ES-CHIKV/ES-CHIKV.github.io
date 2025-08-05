@@ -262,3 +262,70 @@ hr {
         grid-template-columns: 1fr; /* 切换为单列布局 */
     }
 }
+
+/* --- 全新的响应式对比卡片样式 --- */
+.comparison-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* PC端默认两列 */
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.vaccine-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem 2rem; /* 增加左右内边距 */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* 增加一点阴影 */
+}
+
+.vaccine-name {
+    font-size: 1.5rem;
+    font-family: 'Noto Serif SC', serif; /* 使用标题字体 */
+    color: #005f73;
+    margin-bottom: 0.25rem;
+}
+
+.vaccine-manufacturer {
+    color: #555;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1rem;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; /* 增加特性之间的间距 */
+}
+
+.feature-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-label {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.feature-value {
+    color: #555;
+}
+
+/* --- 响应式切换的关键 --- */
+/* 当屏幕宽度小于等于768px时 (典型的平板和手机) */
+@media (max-width: 768px) {
+    .comparison-container {
+        grid-template-columns: 1fr; /* 切换为单列布局 */
+    }
+    .vaccine-card {
+        padding: 1.5rem; /* 手机端内边距稍小 */
+    }
+}
