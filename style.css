@@ -401,3 +401,88 @@ hr {
     margin: 1rem auto; /* 让Logo在自己的容器里居中显示 */
     display: block;
 }
+
+/* --- 响应式导航栏样式 --- */
+.nav-container {
+    display: flex;
+    justify-content: center; /* PC端居中 */
+    align-items: center;
+}
+
+.nav-toggle {
+    display: none; /* PC端默认隐藏 */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger::before {
+    transform: translateY(-8px);
+}
+
+.hamburger::after {
+    transform: translateY(8px);
+}
+
+
+/* --- 移动端样式 (屏幕宽度小于等于768px) --- */
+@media (max-width: 768px) {
+    .nav-container {
+        justify-content: flex-end; /* 汉堡按钮靠右 */
+    }
+
+    .nav-toggle {
+        display: block; /* 手机端显示汉堡按钮 */
+        z-index: 1001; /* 确保在最上层 */
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 76, 93, 0.98); /* 半透明背景 */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%); /* 默认隐藏在右侧 */
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0); /* 显示导航菜单 */
+    }
+
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+    }
+
+    /* 汉堡按钮激活时的动画 */
+    .nav-toggle.active .hamburger {
+        transform: rotate(45deg);
+    }
+    .nav-toggle.active .hamburger::before {
+        opacity: 0;
+    }
+    .nav-toggle.active .hamburger::after {
+        transform: rotate(-90deg) translateX(11px);
+    }
+}
