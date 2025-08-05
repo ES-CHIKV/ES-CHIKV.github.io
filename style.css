@@ -350,3 +350,47 @@ hr {
         padding: 1.5rem; /* 手机端内边距稍小 */
     }
 }
+
+/* --- 用于图文混排的响应式媒体对象样式 --- */
+.media-object {
+    display: flex;
+    gap: 2rem; /* 图片和文字之间的间距 */
+    margin-top: 2rem;
+}
+
+.media-figure {
+    flex: 0 0 35%; /* 图片容器占据35%的宽度，且不伸缩 */
+    max-width: 300px; /* 限制图片最大宽度 */
+}
+
+.media-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.media-figure .caption {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.media-body {
+    flex: 1; /* 文字容器占据剩余空间 */
+}
+
+/* 在移动端，切换为垂直堆叠布局 */
+@media (max-width: 768px) {
+    .media-object {
+        flex-direction: column; /* 垂直排列 */
+    }
+
+    .media-figure {
+        max-width: 100%; /* 在移动端，图片可以撑满宽度 */
+        margin-bottom: 1rem; /* 图片和文字之间的间距 */
+    }
+}
