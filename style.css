@@ -394,3 +394,10 @@ hr {
         margin-bottom: 1rem; /* 图片和文字之间的间距 */
     }
 }
+
+/* --- 用于控制Logo图片的专属样式 --- */
+.logo-image {
+    max-width: 180px; /* 限制Logo的最大宽度 */
+    margin: 1rem auto; /* 让Logo在自己的容器里居中显示 */
+    display: block;
+}
