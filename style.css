@@ -25,23 +25,40 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --- 头部样式 --- */
+/* --- 全新的四行结构头部样式 --- */
 .site-header {
     background-color: #005f73; /* 专业蓝 */
     color: #ffffff;
     padding: 4rem 0;
     text-align: center;
 }
+
 .site-header h1 {
     font-family: 'Noto Serif SC', serif;
-    /* 使用clamp()函数实现动态字体 */
-    font-size: clamp(1.8rem, 8vw, 2.8rem);
-    margin-bottom: 0.5rem;
+    font-size: clamp(2rem, 8vw, 3rem); /* 调整了最大和最小值以适应更多内容 */
+    margin-bottom: 1.5rem; /* 增加主标题与副标题的间距 */
 }
-.site-header p {
+
+.header-audience {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.header-publisher-cn {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 700; /* 加粗中文，使其突出 */
+    margin-bottom: 0.25rem; /* 中英文行间距调小，使其成为一个整体 */
+}
+
+.header-publisher-en {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.85);
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: 0.5px; /* 微调字母间距，增加设计感 */
 }
 
 /* --- 导航栏样式 --- */
