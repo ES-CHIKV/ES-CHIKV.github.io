@@ -27,10 +27,14 @@ a:hover {
 
 /* --- 全新的四行结构头部样式 --- */
 .site-header {
-    background-color: #005f73; /* 专业蓝 */
+    background-image: linear-gradient(rgba(0, 76, 93, 0.85), rgba(0, 76, 93, 0.85)), url('header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+
     color: #ffffff;
-    padding: 4rem 0;
+    padding: 5rem 0; /* 适当增加上下留白 */
     text-align: center;
+    transition: padding 0.3s;
 }
 
 .site-header h1 {
