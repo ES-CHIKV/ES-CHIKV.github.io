@@ -46,9 +46,10 @@ a:hover {
 .header-audience {
     font-size: 0.95rem;
     font-style: italic;
-    color: rgba(255, 255, 255, 0.85);
+    color: #fca311;
     margin-bottom: 1rem;
     font-weight: 350;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 .header-publisher-cn {
